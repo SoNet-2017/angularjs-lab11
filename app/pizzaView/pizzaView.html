@@ -1,0 +1,23 @@
+<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}" class="col-md-8">
+    <ng-map center="45.071087, 7.686567" zoom="12">
+        <marker ng-repeat="pos in dati.vm.positions" position="{{pos.lat}},{{pos.lng}}"></marker>
+    </ng-map>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <ul class="media-list">
+            <li class="media" ng-repeat="pizza in dati.pizzas">
+                <a href="#!/detailsPizza/{{pizza.id}}">
+                    <div class="media-left">
+                        <img class="media-object" ng-src="../{{pizza.img_url}}" alt="{{pizza.img_alt}}">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><strong>{{pizza.nome_pizza}}</strong></h4>
+                        <p>{{pizza.nome_pizzeria}}</p>
+                    </div>
+                    <hr/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

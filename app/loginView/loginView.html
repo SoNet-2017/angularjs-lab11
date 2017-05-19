@@ -1,0 +1,16 @@
+<div class="alert alert-danger alert-dismissible" role="alert" ng-if="error">Login failed! {{ error.message }}</div>
+
+
+<form id="frmLogin" role="form" ng-submit="signIn()">
+    <h2>Login</h2>
+
+    <div class="form-group">
+        <label for="txtEmail">Email address</label>
+        <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" ng-model="user.email" />
+    </div>
+    <div class="form-group">
+        <label for="txtPass">Password</label>
+        <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" ng-model="user.password" />
+    </div>
+    <button type="submit" class="btn btn-success center-block">Login</button>
+</form>

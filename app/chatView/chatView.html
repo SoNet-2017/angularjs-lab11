@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div id="messagesDiv">
+            <div ng-repeat="msg in dati.messages  | orderBy:orderProp" ng-if="[dati.userId, dati.recipientUserId].indexOf(msg.sender) > -1 && [dati.userId, dati.recipientUserId].indexOf(msg.receiver) > -1 ">
+                <em>{{msg.utctime}} - {{msg.senderName}}</em>: {{msg.text}}
+            </div>
+        </div>
+        {{dati.userInfo.email}}: <input type="text" ng-model="dati.msg" ng-keydown="addMessage($event)" placeholder="Message...">
+    </div>
+</div>

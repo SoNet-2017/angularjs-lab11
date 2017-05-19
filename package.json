@@ -1,0 +1,22 @@
+{
+  "name": "sonet-starter",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for the SoNet course",
+  "repository": "https://github.com/SoNet-2017/starter-kit",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.1",
+    "jshint": "^2.9.1",
+    "firebase-tools": "^2.2.1"
+  },
+  "scripts": {
+    "start-bsync": "browser-sync start --config bs-config.js",
+    "lint": "jshint app/**/*.js",
+
+    "fb-deploy": "firebase deploy",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Teodoro Montanaro <teodoro.montanaro@polito.it>"
+}

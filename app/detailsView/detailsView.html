@@ -1,0 +1,10 @@
+<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}" class="col-md-8">
+    <ng-map center="45.071087, 7.686567" zoom="12">
+        <marker ng-repeat="pos in dati.vm.positions" position="{{pos.address}}"></marker>
+    </ng-map>
+</div>
+<h1>{{dati.pizza.nome_pizza}}</h1>
+
+<p>{{dati.pizza.nome_pizzeria}}</p>
+
+<p>{{dati.pizza.address}}</p>
